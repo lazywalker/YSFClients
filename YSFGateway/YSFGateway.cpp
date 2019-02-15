@@ -165,7 +165,7 @@ int CYSFGateway::run()
 	}
 #endif
 
-	ret = ::LogInitialise(m_conf.getLogFilePath(), m_conf.getLogFileRoot(), m_conf.getLogFileLevel(), m_conf.getLogDisplayLevel());
+	ret = ::LogInitialise(m_conf.getLogFilePath(), m_conf.getLogFileRoot(), m_conf.getLogFileLevel(), m_conf.getLogDisplayLevel(), m_conf.getLogUTC());
 	if (!ret) {
 		::fprintf(stderr, "YSFGateway: unable to open the log file\n");
 		return 1;
